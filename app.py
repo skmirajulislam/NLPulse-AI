@@ -12,7 +12,7 @@ app.config.from_object(Config)
 db.init_app(app)
 
 # Load sentiment analysis model
-with open('./NLPulse-AI/Model/best_sentiment_pipeline.pkl', 'rb') as f:
+with open('./Model/best_sentiment_pipeline.pkl', 'rb') as f:
     pipeline = pickle.load(f)
 
 label_mapping = {0: "Negative", 1: "Neutral", 2: "Positive"}
