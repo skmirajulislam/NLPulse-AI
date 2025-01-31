@@ -1,7 +1,7 @@
 import pickle
 
 # Load sentiment analysis pipeline
-with open('./Sentiment_ analysis_ model/Model/best_sentiment_pipeline.pkl', 'rb') as f:
+with open('./Model/best_sentiment_pipeline.pkl', 'rb') as f:
     pipeline = pickle.load(f)
 
 # Define label mapping
