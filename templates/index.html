@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLPulse</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="icon" href="./static/favicon/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="../static/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./static/favicon/android-chrome-512x512.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'success' %}
+                        window.onload = function() {
+                            Swal.fire({
+                                title: "Welcome, {{ session['username'] }}!",
+                                text: "You have successfully logged in.",
+                                icon: "success",
+                                confirmButtonText: "OK"
+                            });
+                        }
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        function handleFormSubmission(event) {
+            var comment = document.querySelector('textarea[name="comment"]').value;
+            if (!comment.trim()) {
+                event.preventDefault();
+                alert('Please enter a valid comment.');
+            }
+        }
+
+        function confirmAction(url, message) {
+            if (confirm(message)) {
+                window.location.href = url;
+            }
+        }
+
+        function confirmDeleteUser(url) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you really want to delete your account? This action cannot be undone.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = url;
+            }
+        });
+    }
+
+    function confirmLogout(url) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to log out?",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, log out!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = url;
+            }
+        });
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./static/img/logo.png" alt="Logo" class="logo-img">
+        <div class="logo">NLPulse AI</div>
+            <div class="dropdown">
+            <button class="dropbtn">{{ session.get('username', 'Guest') }} ▼</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="confirmDeleteUser('{{ url_for('delete_user') }}')">Delete User</a>
+                <a href="#" onclick="confirmLogout('{{ url_for('logout') }}')">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2>Sentiment Analysis on Comments</h2>
+        <form method="POST" onsubmit="handleFormSubmission(event)">
+            <textarea name="comment" placeholder="Enter your comment here..." required></textarea>
+            <br>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+        {% if sentiment %}
+            <h3>{{ sentiment }}</h3>
+            <p>{{ session.get('username', 'Guest') }}, according to your comment, the sentiment is: <strong>{{ sentiment }}</strong></p>
+        {% endif %}
+    </div>
+
+    <!-- AI Model Description Section -->
+    <div class="ai-description">
+        <p>
+            This is an AI model developed by <strong>SK MIRAJ</strong> for sentiment detection. 
+            It is built using Natural Language Processing <strong>(NLP)</strong> and Deep Neural Networks <strong>(DNN)</strong>. The model analyzes comments, predicts sentiment, helping users gain insights into the emotional tone of the text.
+        </p>
+    </div>
+</body>
+</html>

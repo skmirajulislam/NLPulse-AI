@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./static/css/application.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            background-image: url('./static/img/spac-2.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Prevent background from resizing */
+            height: 100vh; /* Ensure body takes up the full height */
+            margin: 0; /* Remove default body margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Prevent background from shrinking */
+        .swal2-popup {
+            z-index: 99999; /* Ensure SweetAlert stays on top */
+        }
+    </style>  
+</head>
+<body>
+    <p class="quote">
+        سورة الشرح: قرآن كريم
+        إن مع العسر يسرا
+    </p>
+    <h1>Login Page</h1>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+        <p class="register-link">Don't have an account?<br> <a href="{{ url_for('register') }}">Register here</a></p>
+    </form>
+
+    {% if error_message %}
+        <script>
+            Swal.fire({
+                title: 'Error',
+                text: '{{ error_message }}',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+        </script>
+    {% endif %}
+</body>
+</html>
