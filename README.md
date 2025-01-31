@@ -34,8 +34,8 @@ The application also includes user authentication and management features, such 
 Clone the repository to your local machine:
 
 ```bash
-git clone <repository_url>
-cd my_flask_app
+git clone https://github.com/skmirajulislam/NLPulse-AI.git
+cd NLPulse-AI
 ```
 
 ### **Step 2: Set up Virtual Environment**
