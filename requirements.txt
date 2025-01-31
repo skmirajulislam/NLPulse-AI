@@ -11,4 +11,4 @@ xgboost==1.7.5
 imbalanced-learn==0.10.1
 pandas==1.5.3
 langdetect==1.0.9
-nltk==3.7
+nltk==3.9
