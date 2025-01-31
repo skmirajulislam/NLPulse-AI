@@ -1,4 +1,4 @@
-# **Sentiment Analysis Web Application using Flask (NL Pulse AI)**
+# **NL Pulse AI**
 
 ## **Project Description**
 
