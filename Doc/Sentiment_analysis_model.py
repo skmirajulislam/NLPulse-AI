@@ -20,11 +20,11 @@ from nltk.tokenize import word_tokenize
 
 # Load dataset
 df = pd.read_csv(
-    "./Sentiment_analysis_model/data/YoutubeCommentsDataSet.csv").fillna("")
+    "./data/YoutubeCommentsDataSet.csv").fillna("")
 
 # Load multilingual stopwords
 try:
-    stopwords = pd.read_csv("./Sentiment_analysis_model/data/stopwords.csv")
+    stopwords = pd.read_csv("./data/stopwords.csv")
     stopword_dict = {lang: set(words.split(","))
                      for lang, words in stopwords.values}
 except:
@@ -90,7 +90,7 @@ print(f"\nBest Model: {best_model_name} (Precision: {best_precision:.4f})")
 
 # Save the best model
 pipeline = Pipeline([("tfidf", vectorizer), ("model", best_model)])
-with open("./Sentiment_analysis_model/Model/best_sentiment_pipeline.pkl", "wb") as f:
+with open("./Model/best_sentiment_pipeline.pkl", "wb") as f:
     pickle.dump(pipeline, f)
 
 print("✅ Optimized Sentiment Analysis Model Trained & Saved!")
