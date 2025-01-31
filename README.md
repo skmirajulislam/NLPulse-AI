@@ -1,4 +1,4 @@
-# **NL Pulse AI**
+# **NL Pulse AI ฉᲩ 🎓**
 
 ## **Project Description**
 
