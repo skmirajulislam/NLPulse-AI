@@ -141,7 +141,7 @@ By default, the app will run at `http://127.0.0.1:5000/`. You can access it in y
 2. Set up a Python virtual environment.
 3. Install the required dependencies from `requirements.txt`.
 4. Run `app.py` to start the local development server.
-5. Open your browser and visit `http://127.0.0.1:5000/` to interact with the app.
+5. Open your browser and visit `http://127.0.0.1:8000/` to interact with the app.
 
 ## **Contributing**
 Contributions are welcome! Feel free to fork the project and create a pull request. If you find any issues or have suggestions for improvement, open an issue on GitHub.
