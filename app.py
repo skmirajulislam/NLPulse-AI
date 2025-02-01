@@ -3,6 +3,7 @@ from flask import Flask, request, render_template, redirect, url_for, flash, ses
 from werkzeug.security import generate_password_hash, check_password_hash
 from db.models import db, User 
 from config import Config
+import os
 
 # Initialize the Flask app with configurations
 app = Flask(__name__)
@@ -116,4 +117,5 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
         # host = '0.0.0.0' allows the app to be accesisble from any device on the network
-    app.run(debug=True, port=app.config['PORT'])
+    debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
+    app.run(debug=debug_mode, port=app.config['PORT'])
