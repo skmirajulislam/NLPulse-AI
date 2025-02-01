@@ -93,11 +93,11 @@ Now, you can start the Flask app:
 python app.py
 ```
 
-By default, the app will run at `http://127.0.0.1:5000/`. You can access it in your web browser.
+By default, the app will run at `http://127.0.0.1:8000/`. You can access it in your web browser.
 
 ### **Step 7: Access the Application**
 
-- Open the browser and visit `http://127.0.0.1:5000/`.
+- Open the browser and visit `http://127.0.0.1:8000/`.
 - You will be prompted to log in or register if you haven't created an account already.
 
 ## **Using the Application**
