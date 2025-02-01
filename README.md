@@ -6,6 +6,23 @@ This project is a web-based sentiment analysis application built with Flask, a l
 
 The application also includes user authentication and management features, such as **user registration**, **login**, **logout**, and **account deletion**. The app uses a simple relational database (via SQLAlchemy) to store user data securely with password hashing.
 
+## **Example Screenshots**
+
+### **Login Page**
+![Login Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse4.png)
+
+### **Register Page**
+![Register Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse5.png)
+
+### **Sentiment Analysis Result**
+![Sentiment Analysis](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse2.png)
+
+### **Logout Page**
+![Logout Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse3.png)
+
+### **Delete Account Page**
+![Delete Account Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse1.png)
+
 ## **Technologies Used**
 - **Flask**: Python web framework used to build the application and handle routing.
 - **SQLAlchemy**: ORM used to interact with the database.
@@ -141,23 +158,6 @@ By default, the app will run at `http://127.0.0.1:8000/`. You can access it in y
 3. Install the required dependencies from `requirements.txt`.
 4. Run `app.py` to start the local development server.
 5. Open your browser and visit `http://127.0.0.1:8000/` to interact with the app.
-
-## **Example Screenshots**
-
-### **Login Page**
-![Login Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse4.png)
-
-### **Register Page**
-![Register Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse5.png)
-
-### **Sentiment Analysis Result**
-![Sentiment Analysis](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse2.png)
-
-### **Logout Page**
-![Logout Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse3.png)
-
-### **Delete Account Page**
-![Delete Account Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse1.png)
 
 ## **Contributing**
 Contributions are welcome! Feel free to fork the project and create a pull request. If you find any issues or have suggestions for improvement, open an issue on GitHub.
