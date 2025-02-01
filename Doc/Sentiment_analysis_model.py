@@ -19,18 +19,19 @@ from nltk.tokenize import word_tokenize
 # nltk.download("punkt")
 
 # Load dataset
-df = pd.read_csv(
-    "./data/YoutubeCommentsDataSet.csv").fillna("")
+df = pd.read_csv("./NLPulse-AI/data/YoutubeCommentsDataSet.csv").fillna("")
 
 # Load multilingual stopwords
 try:
-    stopwords = pd.read_csv("./data/stopwords.csv")
+    stopwords = pd.read_csv("./NLPulse-AI/data/YoutubeCommentsDataSet.csv")
     stopword_dict = {lang: set(words.split(","))
                      for lang, words in stopwords.values}
 except:
     stopword_dict = {"en": set()}
 
 # Detect language
+
+
 def detect_language(text):
     try:
         return detect(text)
@@ -38,6 +39,8 @@ def detect_language(text):
         return "unknown"
 
 # Preprocess text
+
+
 def preprocess_text(text):
     text = re.sub(
         r"http\S+|www\S+|@\S+|#\S+|[^a-zA-Z0-9\s]", "", text.lower().strip())
@@ -80,7 +83,8 @@ for name, model in models.items():
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
     precision = precision_score(y_test, y_pred, average='weighted')
-    print(f"\n{name} Performance:\n{classification_report(y_test, y_pred)}\n Accuracy: {accuracy_score(y_test, y_pred):.4f}\n Precision: {precision:.4f}")
+    print(f"\n{name} Performance:\n{classification_report(y_test, y_pred)}\n Accuracy: {
+          accuracy_score(y_test, y_pred):.4f}\n Precision: {precision:.4f}")
     if precision > best_precision:
         best_precision, best_model, best_model_name = precision, model, name
 
@@ -90,7 +94,7 @@ print(f"\nBest Model: {best_model_name} (Precision: {best_precision:.4f})")
 
 # Save the best model
 pipeline = Pipeline([("tfidf", vectorizer), ("model", best_model)])
-with open("./Model/best_sentiment_pipeline.pkl", "wb") as f:
+with open("./NLPulse-AI/Model/best_sentiment_pipeline.pkl", "wb") as f:
     pickle.dump(pipeline, f)
 
 print("✅ Optimized Sentiment Analysis Model Trained & Saved!")

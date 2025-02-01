@@ -2,7 +2,7 @@
 
 ## **Project Description**
 
-This project is a web-based sentiment analysis application built with Flask, a lightweight Python web framework. The app allows users to input text (such as a comment), and it then predicts the sentiment of the text (whether it is **Negative**, **Neutral**, or **Positive**). The sentiment prediction is powered by a machine learning model trained on text data and stored as a pickle file (`best_sentiment_pipeline.pkl`). 
+This project is a web-based sentiment analysis application built with Flask, a lightweight Python web framework. The app allows users to input text (such as a comment), and it then predicts the sentiment of the text (whether it is **Negative**, **Neutral**, or **Positive**). The sentiment prediction is powered by a machine learning model trained on text data and stored as a pickle file (`best_sentiment_pipeline.pkl`).
 
 The application also includes user authentication and management features, such as **user registration**, **login**, **logout**, and **account deletion**. The app uses a simple relational database (via SQLAlchemy) to store user data securely with password hashing.
 
@@ -25,7 +25,6 @@ The application also includes user authentication and management features, such 
 4. **SweetAlert Notifications**: Alerts are displayed for errors (invalid credentials), successful login, or registration.
 5. **Account Management**: Users can log out or delete their account.
 6. **Responsive Frontend**: The app has a simple, responsive interface designed with HTML, CSS, and SweetAlert2 for notifications.
-
 
 ## **Installation and Setup**
 
@@ -142,6 +141,26 @@ By default, the app will run at `http://127.0.0.1:5000/`. You can access it in y
 3. Install the required dependencies from `requirements.txt`.
 4. Run `app.py` to start the local development server.
 5. Open your browser and visit `http://127.0.0.1:8000/` to interact with the app.
+
+## **Example Screenshots**
+## **Screenshots**
+### **Home Page**
+![Home Page](https://via.placeholder.com/800x400?text=Home+Page)
+
+### **Login Page**
+![Login Page](https://via.placeholder.com/800x400?text=Login+Page)
+
+### **Register Page**
+![Register Page](https://via.placeholder.com/800x400?text=Register+Page)
+
+### **Sentiment Analysis Result**
+![Sentiment Analysis](https://via.placeholder.com/800x400?text=Sentiment+Result)
+
+### **Logout Page**
+![Logout Page](https://via.placeholder.com/800x400?text=Logout+Page)
+
+### **Delete Account Page**
+![Delete Account Page](https://via.placeholder.com/800x400?text=Delete+Account)
 
 ## **Contributing**
 Contributions are welcome! Feel free to fork the project and create a pull request. If you find any issues or have suggestions for improvement, open an issue on GitHub.
