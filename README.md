@@ -143,24 +143,21 @@ By default, the app will run at `http://127.0.0.1:5000/`. You can access it in y
 5. Open your browser and visit `http://127.0.0.1:8000/` to interact with the app.
 
 ## **Example Screenshots**
-## **Screenshots**
-### **Home Page**
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page)
 
 ### **Login Page**
-![Login Page](https://via.placeholder.com/800x400?text=Login+Page)
+![Login Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse4.png)
 
 ### **Register Page**
-![Register Page](https://via.placeholder.com/800x400?text=Register+Page)
+![Register Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse5.png)
 
 ### **Sentiment Analysis Result**
-![Sentiment Analysis](https://via.placeholder.com/800x400?text=Sentiment+Result)
+![Sentiment Analysis](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse2.png)
 
 ### **Logout Page**
-![Logout Page](https://via.placeholder.com/800x400?text=Logout+Page)
+![Logout Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse3.png)
 
 ### **Delete Account Page**
-![Delete Account Page](https://via.placeholder.com/800x400?text=Delete+Account)
+![Delete Account Page](https://github.com/skmirajulislam/NLPulse-AI/blob/master/images/NLpulse1.png)
 
 ## **Contributing**
 Contributions are welcome! Feel free to fork the project and create a pull request. If you find any issues or have suggestions for improvement, open an issue on GitHub.
